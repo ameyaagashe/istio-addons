@@ -12,7 +12,7 @@ spec:
       name: http-grafana
       protocol: HTTP
     hosts:
-    - "grafana.a77a61e85b85a46198645ac29a1ebbfd-e856e794d398b3ae.elb.us-east-1.amazonaws.com"
+    - "grafana.learningservicemesh.com"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -21,7 +21,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "grafana.a77a61e85b85a46198645ac29a1ebbfd-e856e794d398b3ae.elb.us-east-1.amazonaws.com"
+  - "grafana.learningservicemesh.com"
   gateways:
   - grafana-gateway
   http:
